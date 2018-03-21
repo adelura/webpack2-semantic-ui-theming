@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -37,6 +38,7 @@ module.exports = {
     // this handles the bundled .css output file
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css'
-    })
+    }),
+    new HtmlWebpackPlugin()
   ]
 };

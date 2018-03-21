@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist & webpack",
+    "serve": "http-server ./dist -o"
   },
   "author": "",
   "license": "ISC",
@@ -12,12 +14,14 @@
     "semantic-ui-less": "^2.2.10"
   },
   "devDependencies": {
-    "webpack": "^2.2.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^3.0.7",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
-    "url-loader": "^0.5.9"
+    "rimraf": "^2.6.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.2.0"
   }
 }
