@@ -39,6 +39,8 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].[contenthash].css'
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ]
 };
